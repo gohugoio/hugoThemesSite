@@ -1,0 +1,56 @@
+{{ partial "header.html" . }}
+
+<div class="screenshot"><img src="{{ .Params.screenshot }}" style="width:80%;" /></div>
+
+    <h1>{{ .Params.name}}</h1>
+        {{ .Description }}
+
+        <br>
+        <br>
+	<div class="meta clearfix">
+        {{ if isset .Params "author" }}
+            {{ if isset .Params.author "name" }}
+            <strong>Author:</strong>
+                {{with .Params.author.homepage}}<a href="{{.}}">{{end}} 
+                {{.Params.author.name }} 
+                {{if isset .Params.author "homepage"}}</a>{{end}} <br />
+            {{ end }}
+        {{ end }}
+        {{ with .Params.license }}
+        <strong>License:</strong> {{ . }}<br />
+        {{ end }}
+
+        {{ with .Params.tags }}
+        <strong>Tags:</strong> <ul class="tags">
+            {{ range . }}
+            <li><a href="/tags/{{ . | urlize }}">{{ . }}</a></li>
+            {{ end }}
+            </ul>
+        {{ end }}
+		
+
+		<br /><br />
+		
+            {{ with .Params.homepage}}
+            <a class="btn btn-dark btn-lg" href="{{.}}"><i class="fa fa-home"></i> Homepage</a>
+            {{ end }}
+		
+            {{ with .Params.source}}
+            <a class="btn btn-info btn-lg" href="{{ . }}"><i class="fa fa-download"></i> Download</a>
+            {{ end }}
+		
+		
+            <a class="btn btn-success btn-lg" href="{{ .Params.demo }}"><i class="fa fa-road"></i> Demo</a>
+		
+
+		    {{ with .Params.licenselink}}
+            <a class="btn btn-primary btn-lg" href="{{.}}"><i class="fa fa-file"></i> License</a>
+            {{ end }}
+		
+	</div>
+
+    <div class="content">
+        {{ .Content }}
+    </div>
+
+{{ partial "footer.html" . }}
