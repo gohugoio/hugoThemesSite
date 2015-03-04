@@ -16,6 +16,9 @@
                 {{if isset .Params.author "homepage"}}</a>{{end}} <br />
             {{ end }}
         {{ end }}
+        {{ with .Params.min_version }}
+        <strong>Minimum Hugo Version:</strong> {{ . }}<br />
+        {{ end }}
         {{ with .Params.license }}
         <strong>License:</strong> {{ . }}<br />
         {{ end }}
