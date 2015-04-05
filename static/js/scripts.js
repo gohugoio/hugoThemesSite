@@ -43,14 +43,13 @@ function initializeJS() {
     jQuery(function() {
         function responsiveView() {
             var wSize = jQuery(window).width();
+
             if (wSize <= 768) {
-                jQuery('#container').addClass('sidebar-close');
-                jQuery('#sidebar > ul').hide();
+                jQuery('#container').addClass('sidebar-closed');
             }
 
             if (wSize > 768) {
-                jQuery('#container').removeClass('sidebar-close');
-                jQuery('#sidebar > ul').show();
+                jQuery('#container').removeClass('sidebar-closed');
             }
         }
         jQuery(window).on('load', responsiveView);
@@ -58,7 +57,13 @@ function initializeJS() {
     });
 
     jQuery('.toggle-nav').click(function () {
-        if (jQuery('#sidebar > ul').is(":visible") === true) {
+		if(jQuery('#container').hasClass('sidebar-closed')) {
+			jQuery('#container').removeClass('sidebar-closed');
+		} else {
+			jQuery('#container').addClass('sidebar-closed');
+		}
+		/*
+        if (jQuery('#sidebar > ul').is(':visible') === true) {
             jQuery('#main-content').css({
                 'margin-left': '0px'
             });
@@ -66,17 +71,16 @@ function initializeJS() {
                 'margin-left': '-180px'
             });
             jQuery('#sidebar > ul').hide();
-            jQuery("#container").addClass("sidebar-closed");
+            jQuery('#container').addClass('sidebar-closed');
         } else {
             jQuery('#main-content').css({
                 'margin-left': '180px'
             });
             jQuery('#sidebar > ul').show();
-            jQuery('#sidebar').css({
-                'margin-left': '0'
-            });
-            jQuery("#container").removeClass("sidebar-closed");
+            jQuery('#sidebar').removeClass('closed');
+            jQuery('#container').removeClass('sidebar-closed');
         }
+        */
     });
 
     //bar chart

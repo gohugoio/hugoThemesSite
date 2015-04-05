@@ -10,7 +10,7 @@
 
 ul.tags { list-style: none; margin: 0; padding: 0; display: inline; }
 ul.tags li { display: inline; }
-ul.tags li:after { content: ","; } 
+ul.tags li:after { content: ","; }
 ul.tags li:last-child:after { content: ""; }
 
 .github-btn {
@@ -109,7 +109,7 @@ body {
     font-family: 'Lato', sans-serif;
     padding: 0px !important;
     margin: 0px !important;
-    font-size:16px !important;    
+    font-size:16px !important;
     font-weight: 300;
 }
 
@@ -132,6 +132,9 @@ a, a:hover, a:focus {
     outline: 0;
 }
 
+.panel-body {
+    padding-bottom: 0px;
+}
 
 .panel-body a {
     line-height: 1.1;
@@ -167,9 +170,17 @@ input:focus, textarea:focus { outline: none; }
 #container {
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
-/*sidebar navigation*/
+#container.sidebar-closed #sidebar {
+    left: -200px;
+}
+
+#container.sidebar-closed #main-content {
+    margin-left: 0px;
+}
+/* Sidebar Navigation */
 
 #sidebar {
     width: 200px;
@@ -177,6 +188,12 @@ input:focus, textarea:focus { outline: none; }
     position: fixed;
     background: #ffffff;
     overflow-y: auto;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -ms-transition: all .15s linear;
+    -o-transition: all .15s linear;
+    transition: all .15s linear;
+    left: 0px;
 }
 
 
@@ -275,13 +292,13 @@ ul.sidebar-menu li.active a, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
-    transition: all 0.3s ease;        
+    transition: all 0.3s ease;
 }
 ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
     border-bottom: 1px solid #ff4088;
 }
 /*ul.sidebar-menu li.active a,*/ ul.sidebar-menu .sub-menu li.active a{
-    border-bottom: 1px solid #ff4088;   
+    border-bottom: 1px solid #ff4088;
 }
 
 ul.sidebar-menu li a i {
@@ -299,16 +316,21 @@ ul.sidebar-menu li.active a i {
 }
 
 
-#sidebar ul > li > a .menu-arrow { 
-    float: right;    
+#sidebar ul > li > a .menu-arrow {
+    float: right;
     margin-right: 8px;
-    margin-top: 6px;    
+    margin-top: 6px;
 }
 
 #main-content {
     margin-left: 200px;
     line-height: 1.8;
     font-size: 19px;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -ms-transition: all .15s linear;
+    -o-transition: all .15s linear;
+    transition: all .15s linear;
 }
 
 .header {
@@ -325,14 +347,14 @@ ul.sidebar-menu li.active a i {
 
 
 .black-bg {
-    background: rgba(20,20,20,0.9);
-    border-bottom: 1px solid #f1f2f7;
+    background: rgba(10,10,10,0.9);
+    border-bottom: 3px solid rgba(20, 20, 20, 0.7);
 }
 
 .wrapper {
     display: inline-block;
     margin-top: 60px;
-    padding: 0px 15px 15px 0px;
+    padding: 20px 0px 15px 0px;
     width: 100%;
 }
 
@@ -369,7 +391,7 @@ h1.top-menu {
     margin-top: 15px;
 }
 
-/*--sidebar toggle---*/
+/* Sidebar Toggle */
 
 .toggle-nav {
     float: left;
@@ -438,4 +460,98 @@ h1.top-menu {
 
 .navigation:hover {
     background-color: rgba(0,0,0,0.1);
+}
+
+.wrapper {
+   padding-right: 0px;
+}
+
+/* Thumbnail */
+.thumbnail {
+    position: relative;
+    border:1px #f3f3f3 solid;
+    overflow: hidden;
+}
+
+.thumbnail .thumbnail-meta {
+    position: absolute;
+    width: 100%;
+    height: 48px;
+    line-height: 45px;
+    left: 0px;
+    bottom: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding:0px 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border-top: 3px rgba(220, 220, 220, 0.08) solid;
+    transition: all .2s linear;
+    cursor: pointer;
+}
+
+.thumbnail .thumbnail-meta h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 45px;
+}
+.thumbnail .thumbnail-meta h4 a {
+    line-height: 45px;
+    text-decoration: none !important;
+
+}
+
+.thumbnail:hover .thumbnail-meta {
+    background: rgba(255, 64, 136, 0.9);
+    height: 55px;
+}
+
+.thumbnail:hover .thumbnail-meta h4 a {
+    color: #FFFFFF;
+}
+
+.thumbnail .thumbnail-meta .license {
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0.7;
+    max-width: 55px;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.thumbnail:hover .thumbnail-meta .license {
+    opacity: 0.0;
+}
+
+.thumbnail h4 a {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 100%;
+}
+
+/* Contribute */
+.contribute {
+    border-top:1px #efefef solid;
+    line-height: 30px;
+    padding: 25px 0px 15px;
+    position: relative;
+    background: #f9f9f9;
+}
+
+.contribute i {
+    display: inline-block;
+    float: left;
+    line-height: 80px;
+    height: 100%;
+    font-size: 30px;
+    padding:0px 25px;
+    position: absolute;
+    left:0px;
+    top:0px;
+}
+
+.contribute p {
+    padding-left: 80px;
+    padding-right: 10px;
 }
