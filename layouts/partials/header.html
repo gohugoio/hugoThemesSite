@@ -13,6 +13,7 @@
     <link href="/css/bootstrap-theme.css" rel="stylesheet">
     <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/hugofont.css" rel="stylesheet">
     <link href="/css/style-responsive.css" rel="stylesheet" />
     <link href="/css/monokai_sublime.css" rel="stylesheet" />
 
@@ -20,7 +21,7 @@
 
   <body>
   <!-- container section start -->
-  <section id="container" class="">
+  <section id="container" class="sidebar-closed">
 
       <!--header start-->
       <header class="header black-bg">
@@ -39,10 +40,6 @@
                     <span rel="show-github" data-user="spf13" data-repo="hugo"></span>
                     <span rel="show-github" data-user="spf13" data-repo="hugo" data-type="fork"></span>
                 </div>
-            </div>
-
-            <div class="nav title-row" id="top_menu">
-                <h1 class="nav top-menu"> {{title (replace .Params.name "-" " ")}} </h1>
             </div>
       </header>
       <!--header end-->
@@ -63,5 +60,12 @@
                       {{ end }}
                   </div>
                 <div class="col-md-10">
+                    {{ if .IsPage }}
+                    <div class="row back-link">
+                        <div class="col-md-3">
+                            <a href="/" class="btn btn-block btn-info"><i class="fa fa-chevron-left"></i> Back to all themes</a>
+                        </div>
+                    </div>
+                    {{ end }}
                     <section class="panel">
                     <div class="panel-body">
