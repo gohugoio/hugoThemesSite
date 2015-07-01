@@ -469,10 +469,23 @@ h1.top-menu {
 }
 
 /* Thumbnail */
-.thumbnail {
+.thumbnail-container-parent{
+    padding-bottom:1em;
+}
+
+.thumbnail-container{
+    width: 100%;
+    padding-bottom: 75%;
     position: relative;
-    border:1px #f3f3f3 solid;
-    overflow: hidden;
+}
+.thumbnail {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+.thumbnail img.img-responsive{
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .thumbnail .thumbnail-meta {

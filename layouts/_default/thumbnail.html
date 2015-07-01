@@ -1,14 +1,14 @@
-<div class="col-sm-6 col-md-4" style="padding-bottom:1em;">
-    <div class="thumbnail">
-        <a href="{{ .Permalink }}">
-            <img class="img-responsive img-rounded" style="width:100%;" src="{{ .Params.thumbnail }}" alt="{{ .Description }}">
-        </a>
-        <div class="thumbnail-meta">
-            <span class="small pull-right license">{{ .Params.license }}</span>
-            <h4>
-              <a href="{{ .Permalink }}">{{title (replace .Params.name "-" " ")}}</a>
-            </h4>
+<div class="col-sm-6 col-md-4 thumbnail-container-parent">
+    <div class="thumbnail-container">
+        <div class="thumbnail">
+            <a href="{{ .Permalink }}">
+                <img class="img-responsive img-rounded" src="{{ .Params.thumbnail }}" alt="{{ .Description }}">
+            </a>
+            <div class="thumbnail-meta">
+                <h4>
+                  <a href="{{ .Permalink }}">{{title (replace .Params.name "-" " ")}}</a>
+                </h4>
+            </div>
         </div>
     </div>
 </div>
-
