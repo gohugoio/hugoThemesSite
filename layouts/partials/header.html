@@ -60,5 +60,12 @@
                       {{ end }}
                   </div>
                 <div class="col-md-10">
+                    {{ if .IsPage }}
+                    <div class="row back-link">
+                        <div class="col-md-3">
+                            <a href="/" class="btn btn-block btn-info"><i class="fa fa-chevron-left"></i> Back to all themes</a>
+                        </div>
+                    </div>
+                    {{ end }}
                     <section class="panel">
                     <div class="panel-body">

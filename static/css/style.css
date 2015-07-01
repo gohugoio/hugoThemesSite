@@ -573,6 +573,13 @@ h1.top-menu {
 
 
 /* Single */
+.btn-block {
+  display: block;
+  width: 100%;
+}
+.back-link{
+    margin-bottom: 15px;
+}
 #theme-header {
     overflow: hidden;
     margin:-20px;
