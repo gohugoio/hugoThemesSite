@@ -52,7 +52,6 @@ function initializeJS() {
                 jQuery('#container').removeClass('sidebar-closed');
             }
         }
-        jQuery(window).on('load', responsiveView);
         jQuery(window).on('resize', responsiveView);
     });
 
@@ -284,4 +283,3 @@ jQuery(document).ready(function(){
     initializeJS();
     $('[rel=show-github]').showGithub();
 });
-
