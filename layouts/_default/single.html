@@ -11,14 +11,14 @@
                 <ul class="theme-meta">
                     {{ if isset .Params "author" }}
                         {{ if isset .Params.author "name" }}
-                            <li><span class="label">Author:</span> {{if isset .Params.author "homepage"}}<a href="{{.}}">{{else}}<span class="value">{{end}}{{.Params.author.name }}{{if isset .Params.author "homepage"}}</a>{{else}}</spna>{{end}}</li>
+                            <li><span class="label">Author:</span> {{if isset .Params.author "homepage"}}<a href="{{.}}">{{else}}<span class="value">{{end}}{{.Params.author.name }}{{if isset .Params.author "homepage"}}</a>{{else}}</span>{{end}}</li>
                         {{ end }}
                     {{ end }}
                     {{ with .Params.min_version }}
                         <li><span class="label">Minimum Hugo Version:</span> <span class="value">{{ . }}</span></li>
                     {{ end }}
                     {{ with .Params.license }}
-                        <li><span class="label">License:</span> <span class="value">{{ . }}</span></li>
+                        <li><span class="label">License:</span> {{if isset $.Params "licenselink"}}<a href="{{$.Params.licenselink}}">{{else}}<span class="value">{{end}}{{.}}{{if isset $.Params "licenselink"}}</a>{{else}}</span>{{end}}</li>
                     {{ end }}
                     {{ with .Params.tags }}
                         <li>
