@@ -11,7 +11,7 @@
                 <ul class="theme-meta">
                     {{ if isset .Params "author" }}
                         {{ if isset .Params.author "name" }}
-                            <li><span class="label">Author:</span> {{if isset .Params.author "homepage"}}<a href="{{.}}">{{else}}<span class="value">{{end}}{{.Params.author.name }}{{if isset .Params.author "homepage"}}</a>{{else}}</span>{{end}}</li>
+                            <li><span class="label">Author:</span> {{with .Params.author.homepage}}<a href="{{.}}">{{else}}<span class="value">{{end}}{{.Params.author.name}}{{with .Params.author.homepage}}</a>{{else}}</span>{{end}}</li>
                         {{ end }}
                     {{ end }}
                     {{ with .Params.min_version }}
