@@ -9,7 +9,7 @@ Site Layout for http://themes.gohugo.io (not live yet). Includes script to gener
 
 To build the demo sites for the themes, some configuration is needed -- somethimes config specific for a theme.
 
-The script builds the site config given the following scheme:
+The script builds the site config given the following scheme in the `/templates` folder:
 
-* config-tpl-base-<theme>.toml OR config-tpl-base.toml
-* config-tpl-params-<theme>.toml OR config-tpl-params.toml
+* `config-tpl-base-<theme>.toml` OR `config-tpl-base.toml`
+* `config-tpl-params-<theme>.toml` OR `config-tpl-params.toml`
