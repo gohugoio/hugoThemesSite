@@ -1,3 +1,7 @@
+[author]
+    name = "Steve Francia"
+    github = "spf13"
+	
 [params]
   # Date format, used by several themes
   DateForm = "Mon, Jan 2, 2006"
@@ -18,4 +22,22 @@
   tagline =  "Make the Web Fun Again"
   # {{ $.Site.BaseURL }}/img/{{ . }}
   headerimg = "../../../../img/desk.jpg"
+  
+  
+  [[params.social]]
+  	title = "email"
+  	icon = "envelope-o"
+  	url = "mailto:bushbama@whitehouse.gov"
+  [[params.social]]
+  	title = "twitter"
+  	icon = "twitter"
+  	url = "https://twitter.com/bepsays"
+  [[params.social]]
+  	title = "github"
+  	icon = "github"
+  	url = "https://github.com/bep"
+  [[params.social]]
+  	title = "linkedin"
+  	icon = "linkedin"
+  	url = "http://linkedin.com/dobedobedo"
   
