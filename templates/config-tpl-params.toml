@@ -1,12 +1,3 @@
-baseurl = "http://hugo.spf13.com/"
-title = "Hugo Themes"
-author = "Steve Francia"
-copyright = "Copyright (c) 2008 - 2014, Steve Francia; all rights reserved."
-canonifyurls = true
-paginate = 3
-pygmentsCodeFences = "true"
-pygmentsStyle = "trac"
-
 [params]
   # Date format, used by several themes
   DateForm = "Mon, Jan 2, 2006"
