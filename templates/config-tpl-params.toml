@@ -13,4 +13,9 @@
   githubName = "spf13"
   twitterName = "spf13"
   hideHUGOSupport = false
+  # poopshow
+  blogHeader = "Hugo"
+  tagline =  "Make the Web Fun Again"
+  # {{ $.Site.BaseURL }}/img/{{ . }}
+  headerimg = "../../../../img/desk.jpg"
   
