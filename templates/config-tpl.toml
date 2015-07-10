@@ -1,0 +1,24 @@
+baseurl = "http://hugo.spf13.com/"
+title = "Hugo Themes"
+author = "Steve Francia"
+copyright = "Copyright (c) 2008 - 2014, Steve Francia; all rights reserved."
+canonifyurls = true
+paginate = 3
+
+
+[params]
+  # Date format, used by several themes
+  DateForm = "Mon, Jan 2, 2006"
+  DateFormat = "Mon, Jan 2, 2006"
+  # Below fetched from theme Casper
+  description = "Make the Web Fun Again"
+  cover = "../../img/desk.jpg"
+  author = "Hugo"
+  authorlocation = "New York, USA"
+  authorwebsite = "http://gohugo.io"
+  bio= "Hugo is written for speed and performance. Great care has been taken to ensure that Hugo build time is as short as possible. We’re talking milliseconds to build your entire site for most setups."
+  logo = "../../img/hugoSM.png"
+  githubName = "spf13"
+  twitterName = "spf13"
+  hideHUGOSupport = false
+  
