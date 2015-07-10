@@ -3,3 +3,5 @@ public/
 static/theme
 static/images
 .idea
+.DS_Store
+**/.DS_Store
