@@ -7,3 +7,5 @@ paginate = 3
 pygmentsCodeFences = "true"
 pygmentsStyle = "trac"
 
+[blackfriday]
+plainIdAnchors=true
