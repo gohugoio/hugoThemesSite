@@ -2,6 +2,7 @@
 [author]
     name = "Steve Francia"
     github = "spf13"
+	link = "http://gohugo.io/"
 	
 [params]
   # Date format, used by several themes
