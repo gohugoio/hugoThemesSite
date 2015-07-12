@@ -24,6 +24,11 @@
   tagline =  "Make the Web Fun Again"
   # {{ $.Site.BaseURL }}/img/{{ . }}
   headerimg = "../../../../img/desk.jpg"
+  # Simple Hugo
+  github = "bep"
+  twitter = "bepsays"
+  email = "your@mail.com"
+  shortDescription = "Make the Web Fun Again"
   
   
   [[params.social]]
