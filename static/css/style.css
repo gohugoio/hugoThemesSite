@@ -484,7 +484,7 @@ h1.top-menu {
     border: 1px solid #eee;
 }
 .thumbnail img.img-responsive{
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
 }
