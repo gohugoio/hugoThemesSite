@@ -29,6 +29,10 @@
   twitter = "bepsays"
   email = "your@mail.com"
   shortDescription = "Make the Web Fun Again"
+  # Aglaus
+  GravatarHash = "67d3f9eddc34d7649a92597c3978201f"
+  ShowRelatedPost = true
+  SyntaxHighlightTheme = "solarized_dark.min.css"
   
   
   [[params.social]]
