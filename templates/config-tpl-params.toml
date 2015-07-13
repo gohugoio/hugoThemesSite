@@ -33,6 +33,12 @@
   GravatarHash = "67d3f9eddc34d7649a92597c3978201f"
   ShowRelatedPost = true
   SyntaxHighlightTheme = "solarized_dark.min.css"
+  # Greyshade
+  twitter_user = "bepsays"
+  github_user = "bep"
+  facebook_like = true
+  twitter_tweet_button = true
+  google_plus_one = "true"
   
   
   [[params.social]]
