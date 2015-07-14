@@ -41,5 +41,7 @@
   google_plus_one = "true"
   # Hugo base
   mainIcon = "../../img/hugo.png"
+  # Next
+  perPage = 2
   
  
