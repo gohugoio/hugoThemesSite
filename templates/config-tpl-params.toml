@@ -42,21 +42,4 @@
   # Hugo base
   mainIcon = "../../img/hugo.png"
   
-  
-  [[params.social]]
-  	title = "email"
-  	icon = "envelope-o"
-  	url = "mailto:bushbama@whitehouse.gov"
-  [[params.social]]
-  	title = "twitter"
-  	icon = "twitter"
-  	url = "https://twitter.com/bepsays"
-  [[params.social]]
-  	title = "github"
-  	icon = "github"
-  	url = "https://github.com/bep"
-  [[params.social]]
-  	title = "linkedin"
-  	icon = "linkedin"
-  	url = "http://linkedin.com/dobedobedo"
-  
+ 
