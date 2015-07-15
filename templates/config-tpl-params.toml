@@ -43,5 +43,7 @@
   mainIcon = "../../img/hugo.png"
   # Next
   perPage = 2
+  # Hyde
+  themeColor = "theme-base-08"
   
  
