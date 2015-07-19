@@ -34,8 +34,8 @@
               </li>
           {{end}}
 
-            {{ if .IsPage }}
-            <li><a href="https://github.com/spf13/hugo/edit/master/docs/content/{{ .FullFilePath }}" target="blank"><i class='fa fa-edit'></i> Refine this Page</a> </li>
+            {{ with .Params.source }}
+            <li><a href="{{ . }}/blob/master/README.md" target="blank"><i class='fa fa-edit'></i> Refine this Page</a> </li>
             {{ end }}
         </ul>
         <!-- sidebar menu end-->
