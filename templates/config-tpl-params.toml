@@ -45,5 +45,6 @@
   perPage = 2
   # Hyde
   themeColor = "theme-base-08"
-  
+  # Robust
+  ShowTagCloud = true
  
