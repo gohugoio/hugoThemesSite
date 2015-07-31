@@ -24,7 +24,7 @@
                         <li>
                             <span class="label">Tags:</span>
                             {{ range . }}
-                            <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+                            <a href="/tags/{{ . | urlize }}">{{ . | lower }}</a>
                             {{ end }}
                         </li>
                     {{ end }}
