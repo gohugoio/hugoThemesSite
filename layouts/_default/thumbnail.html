@@ -2,7 +2,7 @@
     <div class="thumbnail-container">
         <div class="thumbnail">
             <a href="{{ .Permalink }}">
-                <img class="img-responsive img-rounded" src="{{ .Params.thumbnail }}" alt="{{ .Description }}">
+                <img class="img-responsive img-rounded" src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}" alt="{{ .Description }}" data-src="{{ .Params.thumbnail }}">
             </a>
             <div class="thumbnail-meta">
                 <h4>
