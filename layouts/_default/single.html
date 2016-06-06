@@ -17,6 +17,12 @@
                     {{ with .Params.min_version }}
                         <li><span class="label">Minimum Hugo Version:</span> <span class="value">{{ . }}</span></li>
                     {{ end }}
+                     <li>
+                            <span class="label">Added: {{ .Date.Format "2006-01-02" }}</span>
+                    </li>
+                    <li>
+                            <span class="label">Updated: {{ .Lastmod.Format "2006-01-02" }}</span>
+                    </li>
                     {{ with .Params.license }}
                         <li><span class="label">License:</span> {{if isset $.Params "licenselink"}}<a href="{{$.Params.licenselink}}">{{else}}<span class="value">{{end}}{{.}}{{if isset $.Params "licenselink"}}</a>{{else}}</span>{{end}}</li>
                     {{ end }}
@@ -28,6 +34,7 @@
                             {{ end }}
                         </li>
                     {{ end }}
+                    
                 </ul>
             </div>
 
