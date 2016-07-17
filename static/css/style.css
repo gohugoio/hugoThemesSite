@@ -584,7 +584,7 @@ h1.top-menu {
 #theme-header {
     overflow: hidden;
     margin:-20px;
-    height: 410px;
+    min-height: 410px;
     position: relative;
     border: 1px #ccc solid;
 }
@@ -688,9 +688,10 @@ h1.top-menu {
 }
 
 #theme-header .theme-buttons {
-    position: absolute;
+    display: inline-block;
+    position: relative;
     left: 30px;
-    bottom: 35px;
+    padding: 10px 0 20px 0;
 }
 
 #theme-header .theme-buttons .btn {
