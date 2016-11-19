@@ -1,4 +1,4 @@
-baseurl = "http://themes.gohugo.io"
+baseurl = "https://themes.gohugo.io"
 languageCode = "en-us"
 title = "Hugo Themes"
 
