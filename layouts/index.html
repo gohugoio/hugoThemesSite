@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
 <div class="row">
-    {{ range .Data.Pages.ByLastmod.Reverse }}
+    {{ range .Site.RegularPages.ByLastmod.Reverse }}
     {{ .Render "thumbnail"}}
     {{ end }}
 </div>
