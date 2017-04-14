@@ -2,5 +2,12 @@
     <div class="contribute">
         <i class="icon-fork"></i><p>  If you want to be added to this page please open a new <a //href="https://github.com/spf13/hugoThemes/issues">issue</a> with a link to your GitHub repo.</p>
 		<p><small>Last built: {{ now.Format "Mon Jan 2 2006 15:04" }}</small></p>
+		 {{ with  getenv "REPOSITORY_URL" -}}
+        <p>
+        <a href="https://www.netlify.com">
+        <img src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg"/>
+        </a>
+        </p>
+        {{- end }}
     </div>
 </div>
