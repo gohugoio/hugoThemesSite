@@ -15,23 +15,7 @@
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/style-responsive.css" rel="stylesheet" />
     <link href="/css/monokai_sublime.css" rel="stylesheet" />
-    {{ if .IsPage }}
-    {{ with .Params.images }}
-    <!-- Twitter summary card with large image must be at least 280x150px -->
-      <meta name="twitter:card" content="summary_large_image"/>
-      <meta name="twitter:image:src" content="{{ index . 0 | absURL }}"/>
-    {{ else }}
-      <meta name="twitter:card" content="summary"/>
-    {{ end }}
-
-    <!-- Twitter Card data -->
-    <meta name="twitter:text:title" content="{{ if .IsNode }}Hugo Themes Site{{ else }}Hugo Theme: {{title (replace .Params.name "-" " ")}}{{ end }}"/>
-    <meta name="twitter:title" content="{{ if .IsNode }}Hugo Themes Site{{ else }}Hugo Theme: {{title (replace .Params.name "-" " ")}}{{ end }}"/>
-    <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}"/>
-    {{ with .Site.Social.twitter }}<meta name="twitter:site" content="@{{ . }}"/>{{ end }}
-    {{ range .Site.Authors }}
-      {{ with .twitter }}<meta name="twitter:creator" content="@{{ . }}"/>{{ end }}
-    {{ end }}{{ end }}
+    {{ template "_internal/twitter_cards.html" . }}
     <script async defer src="/js/lazysizes.min.js"></script>
   </head>
 
