@@ -1,7 +1,7 @@
 baseurl = "http://themes.gohugo.io"
 languageCode = "en-us"
 title = "Hugo Themes"
+googleAnalytics = "UA-7131036-4"
 
 [blackfriday]
 plainIdAnchors=true
-

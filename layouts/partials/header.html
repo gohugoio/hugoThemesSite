@@ -9,7 +9,8 @@
     <link rel="shortcut icon" href="favicon.ico">
 
     <title>{{ if .IsNode }}Hugo Themes Site{{ else }}Hugo Theme: {{title (replace .Params.name "-" " ")}}{{ end }}</title>
-
+    {{ template "_internal/google_analytics_async.html" . }}
+    
     <link href="/css/bootstrap-theme.css" rel="stylesheet">
     <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="/css/style.css" rel="stylesheet">
