@@ -742,10 +742,23 @@ h1.top-menu {
 
 #theme-header .theme-buttons a.btn-dark {
     color: #242424;
+    
 }
 
 #theme-header .theme-buttons a.btn-dark:hover {
     color: #121212;
+}
+
+
+#theme-tagcloud {
+    margin-bottom: 15px;
+}
+
+#theme-tagcloud .btn {
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
 .content {
