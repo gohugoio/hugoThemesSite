@@ -1,5 +1,7 @@
 {{ partial "header.html" . }}
+<div class="row">
 {{ partial "tag-cloud.html" . }}
+</div>
 <div class="row">
     {{ range .Site.RegularPages.ByLastmod.Reverse }}
     {{ .Render "thumbnail"}}
