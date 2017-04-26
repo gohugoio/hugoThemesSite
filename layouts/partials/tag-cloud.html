@@ -1,6 +1,6 @@
 <div class="row">
 	<div id="theme-tagcloud" class="col-sm-12" style="margin-bottom: 15px;">
-	{{ $tags := (index $.Site.Taxonomies "tags").ByCount }}
+	{{ $tags := $.Site.Taxonomies.tags.ByCount }}
 	{{ $v1 := where $tags "Count" ">=" 3 }}
 	{{ $v2 := where $v1 "Term" "not in" (slice "hugo" "tags" "rss") }}
 	{{ range $v2 }}
