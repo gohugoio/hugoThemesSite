@@ -1,4 +1,4 @@
-{{ partial "header.html" . }}
+{{define "main"}}
 <div class="row">
 {{ partial "tag-cloud.html" . }}
 </div>
@@ -9,4 +9,4 @@
 </div>
 
 {{ partial "contribute.html" . }}
-{{ partial "footer.html" . }}
+{{ end }}

@@ -1,4 +1,4 @@
-{{ partial "header.html" . }}
+{{define "main"}}
 
     <div id="theme-header">
         <img src="{{ .Params.screenshot }}" class="screenshot-blurred" />
@@ -57,5 +57,4 @@
     <div class="content">
         {{ .Content }}
     </div>
-
-{{ partial "footer.html" . }}
+{{ end }}

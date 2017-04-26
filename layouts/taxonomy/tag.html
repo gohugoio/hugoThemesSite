@@ -1,4 +1,4 @@
-{{ partial "header.html" . }}
+{{define "main"}}
 
 <h1 id="title">All themes tagged with "{{ .Title | lower }}"</h1>
 
@@ -9,4 +9,4 @@
 </div>
 
 {{ partial "contribute.html" . }}
-{{ partial "footer.html" . }}
+{{ end }}
