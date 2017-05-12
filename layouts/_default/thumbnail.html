@@ -1,14 +1,8 @@
-<div class="col-sm-6 col-md-4 thumbnail-container-parent">
-    <div class="thumbnail-container">
-        <div class="thumbnail">
-            <a href="{{ .Permalink }}">
-                <img class="lazyload img-responsive img-rounded" alt="{{ .Description }}" data-src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}">
-            </a>
-            <div class="thumbnail-meta">
-                <h4>
-                  <a href="{{ .Permalink }}">{{title (replace .Params.name "-" " ")}}</a>
-                </h4>
-            </div>
-        </div>
-    </div>
-</div>
+  <a href="{{ .Permalink }}" class="link db shadow-hover gray mb4 w-100 w-30-ns">
+    <img class="lazyload animated fadeIn animated-delay-1 fit db ba b--moon-gray" alt="{{ .Description }}" data-src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}" />
+    <noscript>
+      <img class="fit db ba b--moon-gray" alt="{{ .Description }}" src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}" />
+    </noscript>
+    <span class="f6 dark-gray w-100 db">{{title (replace .Params.name "-" " ")}}</span>
+  </a>
+{{/* flex-auto w-100 w-40-l mr3 mb3 bg-white ba b--moon-gray nested-copy-line-height */}}
