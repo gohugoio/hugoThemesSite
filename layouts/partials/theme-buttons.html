@@ -1,0 +1,16 @@
+<div class="theme-buttons">
+
+    {{ with .Params.source}}
+    <a class="btn btn-info btn-lg" href="{{ . }}"><i class="fa fa-download"></i> Download</a>
+    {{ end }}
+
+    {{ with .Params.demo }}
+    <a class="btn btn-success btn-lg" href="{{ . }}"><i class="fa fa-road"></i> Demo</a>
+    {{ end }}
+
+    {{ with .Params.homepage}}
+    <a class="btn btn-dark btn-lg" href="{{.}}"><i class="fa fa-home"></i> Homepage</a>
+    {{ end }}
+
+
+</div>

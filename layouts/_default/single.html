@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+    {{ $currentPageUrl := .URL }}
+    {{ $globalVariables := .Site.Data.globals }}
+
+  <article class="cf pv3 pv5-ns ph4">
+    <div class="flex bg-moon-gray">
+      <div class="w-100 w-50-ns">
+        {{ partial "theme-details" . }}
+        {{ partial "theme-buttons" . }}
+      </div>
+      <div class="w-100 w-50-ns pa3">
+        <img src="{{ .Params.screenshot }}" class="screenshot-normal" />
+      </div>
+    </div>
+
+    <div class="pv5">
+      {{ .Content }}
+    </div>
+
+  </article>
+
+{{ end }}
