@@ -7,7 +7,8 @@
           {{ if .IsHome -}}
             Hugo Themes
           {{ else }}
-            Hugo Themes ({{ with $.Data.Singular }}{{ . | humanize }}:{{ end }} {{ .Title }})
+            Hugo Themes <span class="f4 mt2 mt0-l db dib-l">({{ with $.Data.Singular }}{{ . | humanize }}:{{ end }} {{ .Title }})</span>
+
           {{- end }}
         </h1>
         <div class="{{ .Site.Params.copyClass }} mid-gray f5 f4-l">

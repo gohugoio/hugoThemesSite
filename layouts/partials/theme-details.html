@@ -1,28 +1,42 @@
+<h1 class="primary-color">
+  {{ .Params.name}}
+</h1>
+<p class="description f4">{{ .Description }}</p>
+<ul class="list nested-links pl0">
+  {{ if isset .Params "author" }}
+    {{ if isset .Params.author "name" }}
+      <li class="mb2">
+        <span class="label">
+          Author:
+        </span>
+        {{with .Params.author.homepage}}<a href="{{.}}">{{else}}<span class="value">{{end}}{{.Params.author.name}}
+        {{with .Params.author.homepage}}</a>{{else}}</span>{{end}}
+      </li>
+    {{ end }}
+    {{ end }}
 
-    <h1>{{ .Params.name}}</h1>
-    <p class="description">{{ .Description }}</p>
-    <ul class="theme-meta">
-        {{ if isset .Params "author" }}
-            {{ if isset .Params.author "name" }}
-                <li><span class="label">Author:</span> {{with .Params.author.homepage}}<a href="{{.}}">{{else}}<span class="value">{{end}}{{.Params.author.name}}{{with .Params.author.homepage}}</a>{{else}}</span>{{end}}</li>
-            {{ end }}
-        {{ end }}
-        {{ with .Params.min_version }}
-            <li><span class="label">Minimum Hugo Version:</span> <span class="value">{{ . }}</span></li>
-        {{ end }}
-        <li>
-                <span class="label">Updated:</span> <span class="value">{{ .Lastmod.Format "2006-01-02" }}</span>
+    {{ with .Params.min_version }}
+        <li class="mb2">
+          <span class="label">Minimum Hugo Version:</span> <span class="value">{{ . }}</span>
         </li>
-        {{ with .Params.license }}
-            <li><span class="label">License:</span> {{if isset $.Params "licenselink"}}<a href="{{$.Params.licenselink}}">{{else}}<span class="value">{{end}}{{.}}{{if isset $.Params "licenselink"}}</a>{{else}}</span>{{end}}</li>
-        {{ end }}
-        {{ with .Params.tags }}
-            <li>
-                <span class="label">Tags:</span>
-                {{ range . }}
-                <a href="/tags/{{ . | urlize }}">{{ . | lower }}</a>
-                {{ end }}
-            </li>
-        {{ end }}
+    {{ end }}
 
-    </ul>
+    <li class="mb2">
+      <span class="label">Updated:</span> <span class="value">{{ .Lastmod.Format "2006-01-02" }}</span>
+    </li>
+    {{ with .Params.license }}
+      <li class="mb2">
+        <span class="label">License:</span> {{if isset $.Params "licenselink"}}<a href="{{$.Params.licenselink}}">{{else}}<span class="value">{{end}}{{.}}{{if isset $.Params "licenselink"}}</a>{{else}}</span>{{end}}
+      </li>
+    {{ end }}
+
+    {{ with .Params.tags }}
+        <li class="mb2 mt4">
+            <span class="label">Tags:</span>
+            {{ range . }}
+            <a href="/tags/{{ . | urlize }}">{{ . | lower }}</a>
+            {{ end }}
+        </li>
+    {{ end }}
+
+</ul>

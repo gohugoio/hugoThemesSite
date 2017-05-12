@@ -1,15 +1,15 @@
-<div class="theme-buttons">
-
+{{ $buttonClasses := "bg-accent-color br2 hover-bg-primary-color hover-light-gray link ph3 pv2 white"}}
+<div class="mt4">
     {{ with .Params.source}}
-    <a class="btn btn-info btn-lg" href="{{ . }}"><i class="fa fa-download"></i> Download</a>
+    <a class="{{ $buttonClasses }}" href="{{ . }}"><i class="fa fa-download"></i> Download</a>
     {{ end }}
 
     {{ with .Params.demo }}
-    <a class="btn btn-success btn-lg" href="{{ . }}"><i class="fa fa-road"></i> Demo</a>
+    <a class="{{ $buttonClasses }}" href="{{ . }}"><i class="fa fa-road"></i> Demo</a>
     {{ end }}
 
     {{ with .Params.homepage}}
-    <a class="btn btn-dark btn-lg" href="{{.}}"><i class="fa fa-home"></i> Homepage</a>
+    <a class="{{ $buttonClasses }}" href="{{.}}"><i class="fa fa-home"></i> Homepage</a>
     {{ end }}
 
 
