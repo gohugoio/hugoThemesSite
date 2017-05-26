@@ -1,0 +1,6 @@
+{{if .PrevInSection}}
+<link rel="prefetch" href="{{ .PrevInSection.Permalink }}">
+{{end}}
+{{if .NextInSection}}
+<link rel="prefetch" href="{{.NextInSection.Permalink }}">
+{{end}}
