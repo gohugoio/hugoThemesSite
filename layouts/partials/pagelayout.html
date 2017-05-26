@@ -6,7 +6,7 @@
         <h1 class="primary-color-dark f2">
             Hugo Themes
             {{ if not .context.IsHome -}}
-              <span class="f4 mt2 mt0-l db dib-l">({{ with $.Data.Singular }}{{ . | humanize }}:{{ end }} {{ .Title }})</span>
+              <span class="f4 mt2 mt0-l db dib-l">({{ with $.Data.Singular }}{{ . | humanize }}:{{ end }} {{ .context.Title }})</span>
           {{- end }}
         </h1>
         <div class="{{ .Site.Params.copyClass }} mid-gray f5 f4-l">
