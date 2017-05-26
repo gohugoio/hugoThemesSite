@@ -1,6 +1,6 @@
 {{ $currentPage := . }}
 {{ $tags := $.Site.Taxonomies.tags.ByCount }}
-{{ $v1 := where $tags "Count" ">=" 3 }}
+{{ $v1 := where $tags "Count" ">=" 6 }}
 {{ $v2 := where $v1 "Term" "not in" (slice "hugo" "tags" "rss") }}
 <nav role="navigation" class="pt2 pl2 pl4-l">
   <h3 class="white">Tags</h3>

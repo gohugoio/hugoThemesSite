@@ -2,7 +2,9 @@
     {{ partial "nav-links-global-mobile.html" . }}
 </div>
 <div  class="docsmenu mobilemenu pb3 dn">
-    {{ partial "nav-links-tags.html" . }}
+  {{/* TODO: Try to use just nav-links-tags, but we need to limit the tags in the mobile menu */}}
+    {{ partial "nav-links-tags-mobile.html" . }}
+
 </div>
 
 <div class="flex dn-l">
