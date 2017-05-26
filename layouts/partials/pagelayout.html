@@ -16,10 +16,7 @@
         </div>
       </article>
       <div class="flex flex-wrap justify-left pr4">
-        {{ $globalVariables := .Site.Data.globals }}
-        {{ $section_classes := $globalVariables.section_flex_wrap }}
-        {{ $interior_classes := $globalVariables.section_flex_wrap_interior }}
-        <section class="{{ $section_classes }} w-100 ">
+        <section class="flex-ns flex-wrap justify-between w-100 ">
           {{ range $section_to_display }}
             {{ .Render "thumbnail"}}
           {{ end }}
