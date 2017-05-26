@@ -1,34 +1,22 @@
 {{ define "main" }}
-
-    {{ $currentPageUrl := .URL }}
-    {{ $globalVariables := .Site.Data.globals }}
-
-
+  {{ $globalVariables := .Site.Data.globals }}
   <article class="cf pv3 pv5-ns ph0 ph4-l">
-
+  
     <div class="flex-l items-center pa4 pa0-l w-100">
-
       <h1 class="primary-color-dark f2">
         Hugo Themes
       </h1>
       <div class="flex-auto-l"></div>
-
-
       <div class="flex justify-between">
         <span class="gray dib-l f6 ph3 pv2 gray dn">Prev/Next: </span>
         {{ partial "previous-next-links.html" . }}
-
         <a href="/" class="bg-primary-color br2 dib-l f6 hover-bg-accent-color link ph3 pv2 white ml5-l">
           All Themes
         </a>
-
       </div>
-
-
     </div>
 
     <div class="flex-l bg-light-gray">
-
       <div class="w-100 w-50-l pa4">
         <div>
           {{ partial "theme-details" . }}
@@ -40,7 +28,6 @@
       <div class="w-100 w-50-l pa4">
         <img src="{{ .Params.screenshot }}" class="fit shadow-2" />
       </div>
-
     </div>
 
     <div class="w-100 w-80-l pv5 ph4 ph5-ns center nested-links nested-img overflow-hidden ">
