@@ -4,11 +4,9 @@
     <div class="w-100 w-80-l ph0">
       <article class="w-100 nested-copy-line-height nested-links nested-img pv4">
         <h1 class="primary-color-dark f2">
-          {{ if .IsHome -}}
             Hugo Themes
-          {{ else }}
-            Hugo Themes <span class="f4 mt2 mt0-l db dib-l">({{ with $.Data.Singular }}{{ . | humanize }}:{{ end }} {{ .Title }})</span>
-
+            {{ if not .context.IsHome -}}
+              <span class="f4 mt2 mt0-l db dib-l">({{ with $.Data.Singular }}{{ . | humanize }}:{{ end }} {{ .Title }})</span>
           {{- end }}
         </h1>
         <div class="{{ .Site.Params.copyClass }} mid-gray f5 f4-l">
