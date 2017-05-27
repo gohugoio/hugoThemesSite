@@ -4,3 +4,10 @@
 {{if .NextInSection}}
 <link rel="prefetch" href="{{.NextInSection.Permalink }}">
 {{end}}
+
+{{/* TODO: This hides search until the integrated sites are live. It is safe to remove at that point. */}}
+<style media="screen">
+  #site-search-form {
+    display: none;
+  }
+</style>
