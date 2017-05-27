@@ -1,4 +1,4 @@
 {{ define "main" }}
-  {{ $section_to_display := .Site.RegularPages.ByDate.Reverse }}
+  {{ $section_to_display := .Site.RegularPages.ByLastmod.Reverse }}
   {{ partial "pagelayout.html" (dict "context" . "section_to_display" $section_to_display)  }}
 {{ end }}
