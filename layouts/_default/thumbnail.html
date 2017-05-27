@@ -1,7 +1,7 @@
   <a href="{{ .Permalink }}" class="link db shadow-hover gray mb4 w-100 w-30-ns">
-    <img class="lazyload animated fadeIn animated-delay-1 fit db ba b--moon-gray" alt="{{ .Description }}" data-src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}" />
+    <img class="lazyload animated fadeIn animated-delay-1 fit db ba b--moon-gray" alt="{{ .Description }}" data-src="{{ .Params.thumbnail | absURL }}" />
     <noscript>
-      <img class="fit db ba b--moon-gray" alt="{{ .Description }}" src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}" />
+      <img class="fit db ba b--moon-gray" alt="{{ .Description }}" src="{{ .Params.thumbnail | absURL }}" />
     </noscript>
     <span class="f6 dark-gray w-100 db">{{title (replace .Params.name "-" " ")}}</span>
   </a>
