@@ -7,6 +7,10 @@ theme = "gohugo-theme"
 plainIdAnchors=true
 config = "config-tpl-base.toml"
 
+[params]
+twitterhandle = "GoHugoIO"
+
+
   # GLOBAL = IF ANYTHING CHANGES BELOW UPDATE MAIN, DOCS, THEMES
 
   # [[menu.global]]
