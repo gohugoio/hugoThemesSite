@@ -9,23 +9,25 @@ config = "config-tpl-base.toml"
 
   # GLOBAL = IF ANYTHING CHANGES BELOW UPDATE MAIN, DOCS, THEMES
 
-  [[menu.global]]
-    name = "News"
-    weight = 1
-    identifier = "news"
-    url = "https://hugodocs.info/news/"
+  # [[menu.global]]
+  #   name = "News"
+  #   weight = 1
+  #   identifier = "news"
+  #   url = "https://hugodocs.info/news/"
 
   [[menu.global]]
     name = "Docs"
-    weight = 5
+    weight = 15
+    post = "external" # remove this when the sites are integrated
     identifier = "docs"
-    url = "https://hugodocs.info/"
+    url = "http://gohugo.io/overview/introduction/"
+    #url = "https://hugodocs.info/"
 
   [[menu.global]]
     name = "Themes"
     weight = 10
     identifier = "themes"
-    url = "http://themes.gohugo.io"
+    url = "/"
 
   # Anything with a weight > 100 gets an external icon
   [[menu.global]]
