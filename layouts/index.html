@@ -1,12 +1,4 @@
-{{define "main"}}
-<div class="row">
-{{ partial "tag-cloud.html" . }}
-</div>
-<div class="row">
-    {{ range .Site.RegularPages.ByLastmod.Reverse }}
-    {{ .Render "thumbnail"}}
-    {{ end }}
-</div>
-
-{{ partial "contribute.html" . }}
+{{ define "main" }}
+  {{ $section_to_display := .Site.RegularPages.ByLastmod.Reverse }}
+  {{ partial "pagelayout.html" (dict "context" . "section_to_display" $section_to_display)  }}
 {{ end }}

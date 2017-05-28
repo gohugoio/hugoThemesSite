@@ -1,0 +1,26 @@
+{{ $currentPage := . }}
+{{ $tags := $.Site.Taxonomies.tags.ByCount }}
+{{ $v1 := where $tags "Count" ">=" 3 }}
+{{ $v2 := where $v1 "Term" "not in" (slice "hugo" "tags" "rss") }}
+<nav role="navigation" class="pt2 pl2 pl4-l">
+  <h3>Tags</h3>
+  <ul class="list pa0 nl2">
+    <li class="f6 f5-l w-100 hover-bg-light-gray hover-accent-color-light fw8">
+      <a href="/" class="dib w-100 link primary-color hover-accent-color-light pl2 pl3-l pr2 pv2">
+        All
+      </a>
+    </li>
+    {{ range $v2 }}
+      {{ if .Term }}
+        {{ $currentPageTitle := $currentPage.Title | lower }}
+        {{ $tagURL := printf "tags/%s/" .Term | relURL }}
+        <li class="f6 f5-l w-100 hover-bg-light-gray hover-accent-color-light fw8 ">
+          <a href="{{ $tagURL }}" class="dib w-100 link hover-accent-color-light pl2 pl3-l pr2 pv1
+          {{ if eq $currentPageTitle .Term }} accent-color-light{{ else }} primary-color{{ end }}">
+            {{ .Term | humanize }} <span class="badge f6 light-silver">({{ .Count }})</span>
+          </a>
+        </li>
+      {{ end }}
+    {{end}}
+  </ul>
+</nav>

@@ -1,12 +1,4 @@
-{{define "main"}}
-
-<h1 id="title">All themes tagged with "{{ .Title | lower }}"</h1>
-
-<div class="row">
-    {{ range .Data.Pages }}
-        {{ .Render "thumbnail" }}
-    {{ end }}
-</div>
-
-{{ partial "contribute.html" . }}
+{{ define "main" }}
+  {{ $section_to_display := .Data.Pages }}
+  {{ partial "pagelayout.html" (dict "context" . "section_to_display" $section_to_display)  }}
 {{ end }}

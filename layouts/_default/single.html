@@ -1,60 +1,39 @@
-{{define "main"}}
+{{ define "main" }}
+  {{ $globalVariables := .Site.Data.globals }}
+  <article class="cf pv3 pv5-ns ph0 ph4-l">
 
-    <div id="theme-header">
-        <img src="{{ .Params.screenshot }}" class="screenshot-blurred" />
-        <div class="dark-overlay"></div>
-        <div class="row">
-            <div class="col-md-6 col-sm-6 screenshot-container"><img src="{{ .Params.screenshot }}" class="screenshot-normal" /></div>
-            <div class="col-md-6 col-sm-6 theme-details">
-                <h1>{{ .Params.name}}</h1>
-                <p class="description">{{ .Description }}</p>
-                <ul class="theme-meta">
-                    {{ if isset .Params "author" }}
-                        {{ if isset .Params.author "name" }}
-                            <li><span class="label">Author:</span> {{with .Params.author.homepage}}<a href="{{.}}">{{else}}<span class="value">{{end}}{{.Params.author.name}}{{with .Params.author.homepage}}</a>{{else}}</span>{{end}}</li>
-                        {{ end }}
-                    {{ end }}
-                    {{ with .Params.min_version }}
-                        <li><span class="label">Minimum Hugo Version:</span> <span class="value">{{ . }}</span></li>
-                    {{ end }}
-                    <li>
-                            <span class="label">Updated:</span> <span class="value">{{ .Lastmod.Format "2006-01-02" }}</span>
-                    </li>
-                    {{ with .Params.license }}
-                        <li><span class="label">License:</span> {{if isset $.Params "licenselink"}}<a href="{{$.Params.licenselink}}">{{else}}<span class="value">{{end}}{{.}}{{if isset $.Params "licenselink"}}</a>{{else}}</span>{{end}}</li>
-                    {{ end }}
-                    {{ with .Params.tags }}
-                        <li>
-                            <span class="label">Tags:</span>
-                            {{ range . }}
-                            <a href="/tags/{{ . | urlize }}">{{ . | lower }}</a>
-                            {{ end }}
-                        </li>
-                    {{ end }}
-                    
-                </ul>
-            </div>
+    <div class="flex-l items-center pa4 pa0-l w-100">
+      <h1 class="primary-color-dark f2">
+        Hugo Themes
+      </h1>
+      <div class="flex-auto-l"></div>
+      <div class="flex justify-between">
+        <span class="gray dib-l f6 ph3 pv2 gray dn">Prev/Next: </span>
+        {{ partial "previous-next-links.html" . }}
+        <a href="/" class="bg-primary-color br2 dib-l f6 hover-bg-accent-color link ph3 pv2 white ml5-l">
+          All Themes
+        </a>
+      </div>
+    </div>
 
-            <div class="theme-buttons">
-
-                {{ with .Params.source}}
-                <a class="btn btn-info btn-lg" href="{{ . }}"><i class="fa fa-download"></i> Download</a>
-                {{ end }}
-
-                {{ with .Params.demo }}
-                <a class="btn btn-success btn-lg" href="{{ . }}"><i class="fa fa-road"></i> Demo</a>
-                {{ end }}
-
-                {{ with .Params.homepage}}
-                <a class="btn btn-dark btn-lg" href="{{.}}"><i class="fa fa-home"></i> Homepage</a>
-                {{ end }}
-
-
-            </div>
+    <div class="flex-l bg-light-gray">
+      <div class="w-100 w-50-l pa4">
+        <div>
+          {{ partial "theme-details" . }}
         </div>
+        <div>
+          {{ partial "theme-buttons" . }}
+        </div>
+      </div>
+      <div class="w-100 w-50-l pa4">
+        <img src="{{ .Params.screenshot }}" class="fit shadow-2" />
+      </div>
     </div>
 
-    <div class="content">
-        {{ .Content }}
+    <div class="w-100 w-80-l pv5 ph4 ph5-ns center nested-links overflow-hidden ">
+      {{ .Content }}
     </div>
+
+  </article>
+
 {{ end }}

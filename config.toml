@@ -2,6 +2,49 @@ baseurl = "http://themes.gohugo.io"
 languageCode = "en-us"
 title = "Hugo Themes"
 googleAnalytics = "UA-7131036-4"
-
+theme = "gohugo-theme"
 [blackfriday]
 plainIdAnchors=true
+config = "config-tpl-base.toml"
+
+[params]
+twitterhandle = "GoHugoIO"
+
+
+  # GLOBAL = IF ANYTHING CHANGES BELOW UPDATE MAIN, DOCS, THEMES
+
+  # [[menu.global]]
+  #   name = "News"
+  #   weight = 1
+  #   identifier = "news"
+  #   url = "https://hugodocs.info/news/"
+
+  [[menu.global]]
+    name = "Docs"
+    weight = 15
+    post = "external" # remove this when the sites are integrated
+    identifier = "docs"
+    url = "http://gohugo.io/overview/introduction/"
+    #url = "https://hugodocs.info/"
+
+  [[menu.global]]
+    name = "Themes"
+    weight = 10
+    identifier = "themes"
+    url = "/"
+
+  # Anything with a weight > 100 gets an external icon
+  [[menu.global]]
+    name = "Community"
+    weight = 150
+    post = "external"
+    identifier = "community"
+    url = "https://discuss.gohugo.io/"
+
+
+  [[menu.global]]
+    name = "Github"
+    weight = 200
+    identifier = "github"
+    post = "external"
+    url = "https://github.com/spf13/hugo"
