@@ -17,7 +17,7 @@
 
    
     # Sidebar social links.
-    github = "bep" # Your Github profile ID
+    github = "bep" # Your GitHub profile ID
     bitbucket = "" # Your Bitbucket profile ID
     linkedin = "" # Your LinkedIn profile ID (from public URL)
     googleplus = "" # Your Google+ profile ID
