@@ -11,3 +11,14 @@
     display: none;
   }
 </style>
+{{/* TODO: backport thumbnail animation to base theme, removing fadeIn if no longer used. */}}
+<style media="screen">
+  .lazyload,
+  .lazyloading {
+    opacity: 0.5;
+  }
+  .lazyloaded {
+    opacity: 1;
+    transition: opacity 300ms;
+  }
+</style>
