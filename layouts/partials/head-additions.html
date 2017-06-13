@@ -1,4 +1,3 @@
-<meta name="twitter:text:title" content="{{ if .Params.name }}{{title (replace .Params.name "-" " ")}}{{ else }}{{ .Title }}{{ end}}"/>
 {{if .PrevInSection}}
 <link rel="prefetch" href="{{ .PrevInSection.Permalink }}">
 {{end}}
