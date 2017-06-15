@@ -2,7 +2,7 @@ baseurl = "http://themes.gohugo.io"
 languageCode = "en-us"
 title = "Hugo Themes"
 googleAnalytics = "UA-7131036-4"
-theme = "gohugo-theme"
+theme = "gohugoioTheme"
 [blackfriday]
 plainIdAnchors=true
 config = "config-tpl-base.toml"
