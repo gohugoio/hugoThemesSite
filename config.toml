@@ -39,7 +39,7 @@ twitter = "GoHugoIO"
     weight = 150
     post = "external"
     identifier = "community"
-    url = "https://discuss.gohugo.io/"
+    url = "https://discourse.gohugo.io/"
 
 
   [[menu.global]]
@@ -47,4 +47,4 @@ twitter = "GoHugoIO"
     weight = 200
     identifier = "github"
     post = "external"
-    url = "https://github.com/spf13/hugo"
+    url = "https://github.com/gohugoio/hugo"
