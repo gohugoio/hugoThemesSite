@@ -22,11 +22,3 @@
     transition: opacity 300ms;
   }
 </style>
-{{ if eq (getenv "HUGO_ENV") "production" }}
-<script type="text/javascript">
-var loc = window.location.href+'';
-if (loc.indexOf('http://')==0){
-    window.location.href = loc.replace('http://','https://');
-}
-</script>
-{{ end }}
