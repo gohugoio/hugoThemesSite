@@ -10,6 +10,11 @@ config = "config-tpl-base.toml"
 [social]
 twitter = "GoHugoIO"
 
+[params]
+github_repo = "https://github.com/spf13/hugothemes"
+gitter = "https://gitter.im/spf13/hugo"
+forum = "https://discourse.gohugo.io/"
+
 
   # GLOBAL = IF ANYTHING CHANGES BELOW UPDATE MAIN, DOCS, THEMES
 
