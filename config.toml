@@ -18,30 +18,29 @@ forum = "https://discourse.gohugo.io/"
 
   # GLOBAL = IF ANYTHING CHANGES BELOW UPDATE MAIN, DOCS, THEMES
 
-  # [[menu.global]]
-  #   name = "News"
-  #   weight = 1
-  #   identifier = "news"
-  #   url = "https://hugodocs.info/news/"
+  [[menu.global]]
+    name = "News"
+    weight = 1
+    identifier = "news"
+    url = "https://gohugo.io/news/"
 
   [[menu.global]]
     name = "Docs"
-    weight = 15
-    post = "external" # remove this when the sites are integrated
+    weight = 10
     identifier = "docs"
-    url = "http://gohugo.io/overview/introduction/"
-    #url = "https://hugodocs.info/"
+    url = "https://gohugo.io/documentation/"
+
 
   [[menu.global]]
     name = "Themes"
-    weight = 10
+    weight = 15
     identifier = "themes"
-    url = "/"
+    url = "https://themes.gohugo.io/"
 
-  # Anything with a weight > 100 gets an external icon
+
   [[menu.global]]
     name = "Community"
-    weight = 150
+    weight = 100
     post = "external"
     identifier = "community"
     url = "https://discourse.gohugo.io/"
