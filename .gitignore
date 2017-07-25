@@ -1,4 +1,5 @@
-content/
+content/*
+!content/_index.md
 public/
 static/theme
 static/images
