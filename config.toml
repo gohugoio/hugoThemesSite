@@ -27,6 +27,19 @@ baseName = "_headers"
 isPlainText = true
 notAlternative = true
 
+[related]
+threshold = 80
+includeNewer = true
+toLower = false
+
+[[related.indices]]
+name = "tags"
+weight = 100
+[[related.indices]]
+name  = "date"
+weight = 10
+pattern = "2006"
+
 [social]
 twitter = "GoHugoIO"
 
