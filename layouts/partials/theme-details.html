@@ -26,7 +26,7 @@
     </li>
     {{ with .Params.license }}
       <li class="mb2">
-        <span class="label">License:</span> {{if isset $.Params "licenselink"}}<a href="{{$.Params.licenselink}}">{{else}}<span class="value">{{end}}{{.}}{{if isset $.Params "licenselink"}}</a>{{else}}</span>{{end}}
+        <span class="label">License:</span> {{ with $.Params.licenselink }}<a href="{{ . }}">{{else}}<span class="value">{{end}}{{.}}{{ if $.Params.licenselink }}</a>{{else}}</span>{{end}}
       </li>
     {{ end }}
 

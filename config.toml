@@ -43,6 +43,14 @@ pattern = "2006"
 [social]
 twitter = "GoHugoIO"
 
+[imaging]
+resampleFilter = "CatmullRom"
+
+# Defatult JPEG quality setting. Default is 75.
+quality = 75
+
+anchor = "smart"
+
 [params]
 github_repo = "https://github.com/spf13/hugothemes"
 gitter = "https://gitter.im/spf13/hugo"

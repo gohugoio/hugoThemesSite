@@ -26,7 +26,12 @@
         </div>
       </div>
       <div class="w-100 w-50-l pa4">
-        <img src="{{ .Params.screenshot }}" class="fit shadow-2" />
+        {{ $img := (.Resources.ByType "image").GetMatch "*screen*" }}
+        {{ with $img }}
+        {{ $big := .Fill "1500x1000 top" }}
+        {{ $small := .Fill "750x500 top" }}
+          <img srcset="{{ $small.RelPermalink }} 1x, {{ $big.RelPermalink }} 2x" alt="{{ $.Title }}" width="{{ $small.Width }}" class="fit shadow-2" />
+        {{ end }}
       </div>
     </div>
 
