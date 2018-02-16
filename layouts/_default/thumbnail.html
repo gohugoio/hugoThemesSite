@@ -10,6 +10,6 @@
     <noscript>
       <img class="fit db ba b--moon-gray" alt="{{ $.Description }}" srcset="{{ $small.RelPermalink }} 1x, { $big.RelPermalink }} 2x" />
     </noscript>
-    <span class="f6 dark-gray w-100 db">{{title (replace .Params.name "-" " ")}}</span>
+    <span class="f6 dark-gray w-100 db">{{title (replace $.Params.name "-" " ")}}</span>
   </a>
 {{ end }}
