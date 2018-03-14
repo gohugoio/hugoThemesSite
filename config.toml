@@ -3,6 +3,9 @@ languageCode = "en-us"
 title = "Hugo Themes"
 googleAnalytics = "UA-7131036-4"
 theme = "gohugoioTheme"
+
+disableKinds = ["taxonomyTerm"]
+
 [blackfriday]
 plainIdAnchors=true
 config = "config-tpl-base.toml"
