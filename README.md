@@ -1,6 +1,6 @@
 # Hugo Themes Site
 
-Site Layout for http://themes.gohugo.io. Includes script to generate content from all themes in hugoThemes.
+Site Layout for https://themes.gohugo.io. Includes script to generate content from all themes in hugoThemes.
 
 **Under construction**
 
