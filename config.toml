@@ -46,6 +46,12 @@ pattern = "2006"
 [social]
 twitter = "GoHugoIO"
 
+[caches]
+[caches.images]
+dir = ":cacheDir"
+# 30 days.
+maxAge = "720h"
+
 [imaging]
 resampleFilter = "CatmullRom"
 
