@@ -15,6 +15,18 @@
     {{ end }}
     {{ end }}
 
+   {{ with .Params.authors }}
+      <li class="mb2">
+        <span class="label">
+          Authors:
+        </span>
+    {{ range . }}
+        {{with .homepage}}<a href="{{.}}">{{else}}<span class="value">{{end}}{{.name}}
+        {{with .homepage}}</a>{{else}}</span>{{end}}
+    {{ end }}
+        </li>
+    {{ end }}
+  
     {{ with .Params.min_version }}
         <li class="mb2">
           <span class="label">Minimum Hugo Version:</span> <span class="value">{{ . }}</span>
