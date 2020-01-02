@@ -7,9 +7,16 @@
     {{ with .Params.demo }}
     <a class="{{ $buttonClasses }}" href="{{ . }}"><i class="fa fa-road"></i> Demo</a>
     {{ end }}
-
+    {{ $noHomePage := . }}
+    {{ with .Site.Params.noHomePage }}
+    {{ range . }}
+    {{ $noHomePage = . }}
+    {{ end }}
+    {{ end }}
+    {{ if not (in .Permalink $noHomePage) }}
     {{ with .Params.homepage}}
     <a class="{{ $buttonClasses }}" href="{{.}}"><i class="fa fa-home"></i> Homepage</a>
+    {{ end }}
     {{ end }}
 
 

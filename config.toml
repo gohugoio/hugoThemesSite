@@ -73,6 +73,8 @@ anchor = "smart"
 github_repo = "https://github.com/spf13/hugothemes"
 gitter = "https://gitter.im/spf13/hugo"
 forum = "https://discourse.gohugo.io/"
+#This array is meant for disabling the Homepage button of a theme.
+#noHomePage = [""]
 
 
   # GLOBAL = IF ANYTHING CHANGES BELOW UPDATE MAIN, DOCS, THEMES
