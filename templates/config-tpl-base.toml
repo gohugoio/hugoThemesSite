@@ -1,11 +1,8 @@
-baseurl = "http://hugo.spf13.com/"
+baseURL = "https://themes.gohugo.io"
 title = "Hugo Themes"
 #author = "Steve Francia"
 copyright = "Copyright (c) 2008 - 2014, Steve Francia; all rights reserved."
-canonifyurls = true
 paginate = 3
-pygmentsCodeFences = "true"
-pygmentsStyle = "trac"
 
 [blackfriday]
 plainIdAnchors=true
