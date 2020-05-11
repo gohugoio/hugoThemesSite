@@ -1,4 +1,5 @@
   {{ $img := (.Resources.ByType "image").GetMatch "*tn*" }}
+  {{ if eq $.Params.name "Academic" }}{{ $img = (.Resources.ByType "image").GetMatch "*screenshot*" }}{{ end }}
       {{ with $img }}
       {{ $big := .Fill "768x512 top" }}
       {{ $small := .Fill "384x256 top" }}
