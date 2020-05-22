@@ -5,9 +5,8 @@ googleAnalytics = "UA-7131036-4"
 
 disableKinds = ["taxonomyTerm"]
 
-#due to math typesetting issues in goldmark see: https://github.com/gohugoio/hugo/issues/6544
-[markup]
-  defaultMarkdownHandler = "blackfriday"
+[markup.goldmark.renderer]
+  unsafe= true
 
 [module]
   [module.hugoVersion]
