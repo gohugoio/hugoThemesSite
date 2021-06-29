@@ -1,7 +1,11 @@
 <h1 class="primary-color">
   {{ .Title }}
 </h1>
-{{ with .Params.meta.description }}<p class="description f4">{{ . }}</p>{{ end }}
+{{ with .Params.meta.description }}
+  <p class="description f4">
+    {{ . }}
+  </p>
+{{ end }}
 <ul class="list nested-links pl0">
   {{ with .Params.meta.author }}
     {{ if reflect.IsMap .  }}
@@ -9,52 +13,95 @@
         <span class="label">
           Author:
         </span>
-        {{with .homepage}}<a href="{{.}}">{{else}}<span class="value">{{end}}{{.name}}
-        {{with .homepage}}</a>{{else}}</span>{{end}}
+        {{if .homepage}}
+          <a href="{{.homepage }}">
+            {{ .name }}
+          </a>
+        {{else}}
+          <span class="value">
+            {{ .name }}
+          </span>
+        {{end}}
+        
       </li>
     {{ end }}
-    {{ end }}
-
-   {{ with .Params.meta.authors }}
-      <li class="mb2">
-        <span class="label">
-          Authors:
-        </span>
-    {{ range . }}
-        {{with .homepage}}<a href="{{.}}">{{else}}<span class="value">{{end}}{{.name}}
-        {{with .homepage}}</a>{{else}}</span>{{end}}
-    {{ end }}
-        </li>
-    {{ end }}
+  {{ end }}
+  {{ with .Params.meta.authors }}
+    <li class="mb2">
+      <span class="label">
+        Authors:
+      </span>
+      {{ range . }}
+        {{if .homepage}}
+          <a href="{{.homepage}}">
+            {{ .name }}
+          </a>
+        {{else}}
+          <span class="value">
+            {{ .name }}
+          </span>
+        {{end}}
+      {{ end }}
+    </li>
+  {{ end }}
   
-    {{ with .Params.hugoVersion.min }}
-        <li class="mb2">
-          <span class="label">Minimum Hugo Version:</span> <span class="value">{{ . }}</span>
-        </li>
-    {{ end }}
-
-    {{ with .Params.githubInfo }}
+  {{ with .Params.hugoVersion.min }}
     <li class="mb2">
-      <span class="label">GitHub Stars:</span> <span class="value">{{ .Stars }}</span>
+      <span class="label">
+        Minimum Hugo Version:
+      </span>
+      <span class="value">
+        {{ . }}
+      </span>
     </li>
-{{ end }}
-
+  {{ end }}
+  
+  {{ with .Params.githubInfo }}
     <li class="mb2">
-      <span class="label">Updated:</span> <span class="value">{{ .Lastmod.Format "2006-01-02" }}</span>
+      <span class="label">
+        GitHub Stars:
+      </span>
+      <span class="value">
+        {{ .Stars }}
+      </span>
     </li>
-    {{ with .Params.meta.license }}
-      <li class="mb2">
-        <span class="label">License:</span> {{ with $.Params.licenselink }}<a href="{{ . }}">{{else}}<span class="value">{{end}}{{.}}{{ if $.Params.licenselink }}</a>{{else}}</span>{{end}}
-      </li>
+  {{ end }}
+  
+  <li class="mb2">
+    <span class="label">
+      Updated:
+    </span>
+    <span class="value">
+      {{ .Lastmod.Format "2006-01-02" }}
+    </span>
+  </li>
+  {{ with .Params.meta.license }}
+    <li class="mb2">
+      <span class="label">
+        License:
+      </span>
+      {{ if $.Params.licenselink }}
+        <a href="{{ $.Params.licenselink }}">
+          {{ .}}
+        </a>
+      {{else}}
+        <span class="value">
+          {{ .}}
+        </span>
+      {{end}}
+    </li>
+  {{ end }}
+  
+  {{ with (.GetTerms "tags") }}
+    <li class="mb2 mt4">
+    <span class="label">
+      Tags:
+    </span>
+    {{ range . }}
+      <a href="{{ .Permalink }}">
+        {{ .LinkTitle | title  }}
+      </a>
     {{ end }}
-
-    {{ with .Params.meta.tags }}
-        <li class="mb2 mt4">
-            <span class="label">Tags:</span>
-            {{ range . }}
-            <a href="/tags/{{ . | urlize }}">{{ . | lower }}</a>
-            {{ end }}
-        </li>
-    {{ end }}
-
+  {{ end }}
+  
 </ul>

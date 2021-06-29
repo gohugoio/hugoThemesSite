@@ -1,23 +1,25 @@
 {{ $buttonClasses := "bg-accent-color br2 hover-bg-primary-color hover-light-gray link ph3 pv2 white"}}
 <div class="mt4">
-    {{ with .Params.source}}
-    <a class="{{ $buttonClasses }}" href="{{ . }}"><i class="fa fa-download"></i> Download</a>
-    {{ end }}
-
-    {{ with .Params.demo }}
-    <a class="{{ $buttonClasses }}" href="{{ . }}"><i class="fa fa-road"></i> Demo</a>
-    {{ end }}
-    {{ $noHomePage := . }}
-    {{ with .Site.Params.noHomePage }}
-    {{ range . }}
-    {{ $noHomePage = . }}
-    {{ end }}
-    {{ end }}
-    {{ if not (in .Permalink $noHomePage) }}
-    {{ with .Params.homepage}}
-    <a class="{{ $buttonClasses }}" href="{{.}}"><i class="fa fa-home"></i> Homepage</a>
-    {{ end }}
-    {{ end }}
-
-
+  {{/* TODO(bep) source for non-GitHub themes */}}
+  {{ with .Params.githubInfo}}
+    <a class="{{ $buttonClasses }}" href="{{ .htmlurl }}">
+      <i class="fa fa-download"></i>
+      Download
+    </a>
+  {{ end }}
+  
+  {{ with .Params.meta.demosite }}
+    <a class="{{ $buttonClasses }}" href="{{ . }}">
+      <i class="fa fa-road"></i>
+      Demo
+    </a>
+  {{ end }}
+  
+  {{ with .Params.meta.homepage}}
+    <a class="{{ $buttonClasses }}" href="{{.}}">
+      <i class="fa fa-home"></i>
+      Homepage
+    </a>
+  {{ end }}
+  
 </div>
