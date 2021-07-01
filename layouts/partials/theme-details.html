@@ -104,4 +104,31 @@
     {{ end }}
   {{ end }}
   
+  {{ with .Params.themeWarnings }}
+    <p class="w-90 ba br2 pa3 mv8 red bg-washed-red" role="alert">
+      <strong>
+        Note!
+      </strong>
+      {{ range . }}
+        {{ . }}
+      {{ end }}
+      <br/>
+      <br/>
+      If you are maintainer of this theme, please verify that this theme works with a
+      <a href="https://github.com/gohugoio/hugo/releases/">
+        recent release of Hugo.
+      </a>
+      Then add an appropriate
+      <a href="https://gohugo.io/hugo-modules/configuration/#module-config-hugoversion">
+        Version Configuration
+      </a>
+      to the theme's
+      <code>config.toml</code>
+      and then finally
+      <a href="https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-commits/managing-tags#creating-a-tag">
+        tag a new version.
+      </a>
+    </p>
+  {{ end }}
+  
 </ul>
