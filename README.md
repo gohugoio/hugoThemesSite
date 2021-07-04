@@ -1,5 +1,3 @@
-This repository is replaced by https://github.com/gohugoio/hugoThemesSiteBuilder
-
 
 # Hugo Themes Site
 
