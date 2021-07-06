@@ -1,7 +1,6 @@
 {{ $buttonClasses := "bg-accent-color br2 hover-bg-primary-color hover-light-gray link ph3 pv2 white"}}
 <div class="mt4">
-  {{/* TODO(bep) source for non-GitHub themes */}}
-  {{ with .Params.githubInfo}}
+  {{ with .Params.htmlURL}}
     <a class="{{ $buttonClasses }}" href="{{ .htmlurl }}">
       <i class="fa fa-download"></i>
       Download
