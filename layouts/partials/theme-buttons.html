@@ -1,17 +1,20 @@
-{{ $buttonClasses := "bg-accent-color br2 hover-bg-primary-color hover-light-gray link ph3 pv2 white"}}
+{{ $buttonClasses := "bg-accent-color br2 hover-bg-primary-color hover-light-gray link ph3 pv2 white" }}
 <div class="mt4">
-  {{ with .Params.htmlURL}}
-    <a class="{{ $buttonClasses }}" href="{{ . }}">
-      <i class="fa fa-download"></i>
-      Download
-    </a>
+  {{ if not site.Params.hideHTMLLink }}
+    {{ with .Params.htmlURL }}
+      <a class="{{ $buttonClasses }}" href="{{ . }}">
+        <i class="fa fa-download"></i>
+        Download
+      </a>
+    {{ end }}
   {{ end }}
-  
-  {{ with .Params.meta.demosite }}
-    <a class="{{ $buttonClasses }}" href="{{ . }}">
-      <i class="fa fa-road"></i>
-      Demo
-    </a>
+  {{ if not site.Params.hideDemoLink }}
+    {{ with .Params.meta.demosite }}
+      <a class="{{ $buttonClasses }}" href="{{ . }}">
+        <i class="fa fa-road"></i>
+        Demo
+      </a>
+    {{ end }}
   {{ end }}
-  
+
 </div>
