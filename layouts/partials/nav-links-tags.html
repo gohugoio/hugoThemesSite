@@ -11,12 +11,11 @@
       </a>
     </li>
     {{ range $v2 }}
-      {{ if .Term }}
-        {{ $currentPageTitle := $currentPage.Title | lower }}
-        {{ $tagURL := printf "tags/%s/" .Term | relURL }}
+      {{ if .Page }}
+        {{ $tagURL := .Page.RelPermalink }}
         <li class="f6 f5-l w-100 hover-bg-light-gray hover-accent-color-light fw8 ">
           <a href="{{ $tagURL }}" class="dib w-100 link hover-accent-color-light pl2 pl3-l pr2 pv1
-          {{ if eq $currentPageTitle .Term }} accent-color-light{{ else }} primary-color{{ end }}">
+          {{ if eq $currentPage .Page }} accent-color-light{{ else }} primary-color{{ end }}">
             {{ .Term | humanize }} <span class="badge f6 light-silver">({{ .Count }})</span>
           </a>
         </li>
