@@ -1,116 +1,30 @@
-baseurl         = "https://themes.gohugo.io"
-languageCode    = "en-us"
-title           = "Hugo Themes"
-googleAnalytics = "UA-7131036-4"
-
-disableKinds = ["taxonomy"]
-
-[markup.goldmark.renderer]
-  unsafe = true
+baseurl = "https://themes.gohugo.io"
 
 [module]
   [module.hugoVersion]
-    min = "0.111.0"
+    min = "0.145.0"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "content"
+    target = "content"
   [[module.imports]]
-    path = "github.com/gohugoio/gohugoioTheme"
-
-[blackfriday]
-  plainIdAnchors = true
-  config         = "config-tpl-base.toml"
-
-[outputs]
-  home = ["HTML", "RSS", "REDIR", "HEADERS"]
-
-[mediaTypes]
-  [mediaTypes."text/netlify"]
-    suffixes  = [""]
-    delimiter = ""
-
-[outputFormats]
-  [outputFormats.REDIR]
-    mediatype      = "text/netlify"
-    baseName       = "_redirects"
-    isPlainText    = true
-    notAlternative = true
-  [outputFormats.HEADERS]
-    mediatype      = "text/netlify"
-    baseName       = "_headers"
-    isPlainText    = true
-    notAlternative = true
-
-[related]
-  threshold    = 80
-  includeNewer = true
-  toLower      = false
-
-  [[related.indices]]
-    name   = "tags"
-    weight = 100
-  [[related.indices]]
-    name    = "date"
-    weight  = 10
-    pattern = "2006"
-
-[social]
-  twitter = "GoHugoIO"
-
-[caches]
-  [caches.images]
-    dir = ":cacheDir"
-    # 30 days.
-    maxAge = "720h"
-
-[imaging]
-  resampleFilter = "CatmullRom"
-
-  # Defatult JPEG quality setting. Default is 75.
-  quality = 75
-
-  anchor = "smart"
-
-[params]
-  github_repo = "https://github.com/gohugoio/hugoThemesSiteBuilder"
-  gitter      = "https://gitter.im/spf13/hugo"
-  forum       = "https://discourse.gohugo.io/"
-  #This array is meant for disabling the Homepage button of a theme.
-  noHomePage = ["hugo-theme-novela"]
-
-  # GLOBAL = IF ANYTHING CHANGES BELOW UPDATE MAIN, DOCS, THEMES
-
-[[menu.global]]
-  name       = "News"
-  weight     = 1
-  identifier = "news"
-  url        = "https://gohugo.io/news/"
-
-[[menu.global]]
-  name       = "Docs"
-  weight     = 10
-  identifier = "docs"
-  url        = "https://gohugo.io/documentation/"
-
-[[menu.global]]
-  name       = "Themes"
-  weight     = 15
-  identifier = "themes"
-  url        = "https://themes.gohugo.io/"
-
-[[menu.global]]
-  name       = "Showcase"
-  weight     = 20
-  identifier = "showcase"
-  url        = "https://gohugo.io/showcase/"
-
-[[menu.global]]
-  name       = "Community"
-  weight     = 100
-  post       = "external"
-  identifier = "community"
-  url        = "https://discourse.gohugo.io/"
-
-[[menu.global]]
-  name       = "GitHub"
-  weight     = 200
-  identifier = "github"
-  post       = "external"
-  url        = "https://github.com/gohugoio/hugo"
+    path = "github.com/gohugoio/hugoDocs"
+    # We share the theme with the docs site, but we need to be explicit about
+    # the mounts to avoid pulling in the content.
+    [[module.imports.mounts]]
+      source = "layouts"
+      target = "layouts"
+    [[module.imports.mounts]]
+      source = "assets"
+      target = "assets"
+    [[module.imports.mounts]]
+      source = "static"
+      target = "static"
+    [[module.imports.mounts]]
+      source = "data"
+      target = "data"
+    [[module.imports.mounts]]
+      source = "i18n"
+      target = "i18n"
